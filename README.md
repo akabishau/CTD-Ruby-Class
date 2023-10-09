@@ -5,7 +5,11 @@ This repository contains my Ruby class and SQL assignments, organized by week.
 ## Repository Structure
 
 - **Week 1**: SQL Basics
-  - [Assignment](week-01/assignment.txt): [Solution](week-01/solutions.sql).
+  - [Assignment](week-01/assignment.txt) - [Solution](week-01/solutions.sql).
+- **Week 2**: More SQL, Introduction To Ruby
+  - [SQL Assignment](week-02/sql/assignment.txt) - [Solution](week-02/sql/solutions.sql)
+  - [Ruby Assignment](week-02/ruby/assignment.txt) - [Solution](week-02/ruby/solution.rb)
+  
 
 
 ## Additional Resources
