@@ -18,7 +18,6 @@ end
 
 def print_full_name(name_parts)
     cleaned_parts = name_parts.reject{ |part| part.empty? }
-    print cleaned_parts
     normilized_parts = cleaned_parts.map{ |part| part.downcase.capitalize }
     full_name = normilized_parts.join(" ")
     puts "Hi, #{full_name}!"
