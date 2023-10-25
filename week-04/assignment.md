@@ -78,8 +78,8 @@ puts new_array
 ```
  - Note the use of the spaceship operator <=>. It does what the commented out lines do, but on one line. Add to this program. 
  - Add additional calls to book_array.sort that pass blocks. 
- - For your first call to sort, pass a block so that the array is sorted in order of title, and print out the array. 
- - For your second call to sort, pass a block so that the array is sorted in order of copies, and print out the array.
+    - For your first call to sort, pass a block so that the array is sorted in order of title, and print out the array. 
+    - For your second call to sort, pass a block so that the array is sorted in order of copies, and print out the array.
 
 ### Task 6
 - Create a program block_function.rb. 
