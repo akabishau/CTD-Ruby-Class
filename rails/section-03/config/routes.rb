@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :posts
+  # resources :pages
   get "/pages", to: "pages#index"
   get "/pages/new", to: "pages#new", as: "new_page"
   get "/pages/:id", to: "pages#show", as: "page"
@@ -7,4 +8,5 @@ Rails.application.routes.draw do
   # method, resource, controller's method
   post "pages", to: "pages#create"
   patch "/pages/:id", to: "pages#update"
+  delete "/pages/:id", to: "pages#destroy"
 end
