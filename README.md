@@ -5,17 +5,18 @@ This repository contains my Ruby class and SQL assignments, organized by week.
 ## Repository Structure
 
 - **Week 1**: SQL Basics
-  - [Assignment](week-01/assignment.txt) - [Solution](week-01/solutions.sql).
+  - [Assignment](ruby/week-01/assignment.txt) - [Solution](ruby/week-01/solutions.sql).
 - **Week 2**: More SQL, Introduction To Ruby
-  - [SQL Assignment](week-02/sql/assignment.txt) - [Solution](week-02/sql/solutions.sql)
-  - [Ruby Assignment](week-02/ruby/assignment.md) - [Solution](week-02/ruby/solution.rb)
+  - [SQL Assignment](ruby/week-02/sql/assignment.txt) - [Solution](ruby/week-02/sql/solutions.sql)
+  - [Ruby Assignment](ruby/week-02/ruby/assignment.md) - [Solution](ruby/week-02/ruby/solution.rb)
 - **Week 3**: Ruby Collections, Loops, Conditional Statements
-  - [Assignment](week-03/assignment.md) - [Solutions](week-03/solutions).
+  - [Assignment](ruby/week-03/assignment.md) - [Solutions](ruby/week-03/solutions).
 - **Week 4**: Ruby Methods, Classes, And Blocks
-  - [Assignment](week-04/assignment.md) - [Solutions](week-04/solutions).
+  - [Assignment](ruby/week-04/assignment.md) - [Solutions](ruby/week-04/solutions).
 - **Week 5**: Ruby Test First Development
-  - [Assignment](week-05/README.md) - [Solutions](week-05)
-  
+  - [Assignment](ruby/week-05/README.md) - [Solutions](ruby/week-05)
+- **Week 6**: Rails Basics
+  - [Assignment](rails/section-03/README.md) - [Solutions](rails/section-03)
 
 
 ## Additional Resources
