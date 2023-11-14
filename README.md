@@ -13,7 +13,8 @@ This repository contains my Ruby class and SQL assignments, organized by week.
   - [Assignment](week-03/assignment.md) - [Solutions](week-03/solutions).
 - **Week 4**: Ruby Methods, Classes, And Blocks
   - [Assignment](week-04/assignment.md) - [Solutions](week-04/solutions).
-  
+- **Week 5**: Ruby Test First Development
+  - [Assignment](week-05/README.md) - [Solutions](week-05)
   
 
 
