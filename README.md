@@ -17,7 +17,7 @@ This repository contains my Ruby class and SQL assignments, organized by week.
   - [Assignment](ruby/week-05/README.md) - [Solutions](ruby/week-05)
 - **Week 6**: Rails Basics
   - [Assignment](rails/section-03/blog/README.md) - Solution: [Blog App (part 1)](rails/section-03/blog)
-- **Week 6**: Rails Active Record Associations
+- **Week 7**: Rails Active Record Associations
   - [Assignment](rails/section-03/blog/README.md) - Solution: [Blog App (part 2)](rails/section-03/blog)
   - [Assignment](rails/section-03/community/README.md) - Solution: [Community App](rails/section-03/community)
   - [Assignment](rails/section-03/periodical/README.md) - Solution: [Periodical App](rails/section-03/periodical)
