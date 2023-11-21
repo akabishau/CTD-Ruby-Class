@@ -23,7 +23,7 @@ This repository contains my Ruby class and SQL assignments, organized by week.
   - [Assignment](rails/section-03/periodical/README.md) - Solution: [Periodical App](rails/section-03/periodical)
   - [Assignment](rails/section-03/mdb/README.md) - Solution: [MDB App](rails/section-03/mdb)
 - **Week 8**: Additional Rails Topics
-  - Solution: [MDB App](rails/section-04/customer)
+  - Solution: [Customer App](rails/section-04/customer)
 
 ## Additional Resources
 
