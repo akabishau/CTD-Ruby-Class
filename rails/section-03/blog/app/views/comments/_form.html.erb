@@ -1,0 +1,19 @@
+<%# [@post, comment] - nested route for the comment %>
+<%= form_for [@post, comment] do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%# linked to comment.name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content, "Comment" %>
+    <%= f.text_area :content %>
+  </div>
+
+<%# default text: Create [Model] or Update [Model] %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
