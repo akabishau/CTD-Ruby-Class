@@ -1,11 +1,13 @@
 class OrdersController < ApplicationController
 
+
+  before_action :set_order, only: %i[ show edit update destroy ]
+
   def index
     @orders = Order.all
   end
 
   def show
-    @order = Order.find(params[:id])
   end
 
   def new
@@ -13,7 +15,6 @@ class OrdersController < ApplicationController
   end
 
   def edit
-    @order = Order.find(params[:id])
   end
 
 
@@ -22,29 +23,31 @@ class OrdersController < ApplicationController
     if @order.save
       redirect_to @order, notice: "Order was was successfully created."
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
 
   def update
-    @order = Order.find(params[:id])
     if Order.update(order_params)
       redirect_to @order, notice: "Order was was successfully updated."
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
 
   def destroy
-    @order = Order.find(params[:id])
     @order.destroy
     redirect_to orders_url, notice: "Order was successfully destroyed."
   end
 
 
   private
+
+    def set_order
+      @order = Order.find(params[:id])
+    end
 
     def order_params
       params.require(:order).permit(:product_name, :product_count, :customer_id)
