@@ -43,15 +43,18 @@ class CustomersController < ApplicationController
     end
   end
 
-  # DELETE /customers/1 or /customers/1.json
   def destroy
-    @customer.destroy
-
-    respond_to do |format|
-      format.html { redirect_to customers_url, notice: "Customer was successfully destroyed." }
-      format.json { head :no_content }
+    begin
+      @customer.destroy
+      flash[:notice] = "The customer record was successfully deleted."
+      redirect_to customers_url
+    rescue ActiveRecord::InvalidForeignKey
+      flash[:alert] = "That customer record could not be deleted because the customer has orders."
+      # redirect to the custormer page or back to the list as backup option
+      redirect_back(fallback_location: customers_url)
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
