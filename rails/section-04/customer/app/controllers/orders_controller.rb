@@ -29,7 +29,7 @@ class OrdersController < ApplicationController
 
 
   def update
-    if Order.update(order_params)
+    if @order.update(order_params)
       redirect_to @order, notice: "Order was was successfully updated."
     else
       render :edit, status: :unprocessable_entity
