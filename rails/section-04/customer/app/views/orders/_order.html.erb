@@ -1,17 +1,22 @@
-<div id="<%= dom_id order %>">
-    <p>
-        <strong>Product Name:</strong>
-        <%= order.product_name %>
-    </p>
-
-    <p>
+<div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 mb-4">
+  <div class="card border border-2 border-success p-1 h-100">
+    <div class="card-header">
+      <%= order.product_name %>
+    </div>
+    <div class="card-body">
+      <p class="card-text">
         <strong>Product Count:</strong>
         <%= order.product_count %>
-    </p>
-
-    <p>
+      </p>
+      <p class="card-text">
         <strong>Customer:</strong>
         <%= order.customer.full_name %>
-    </p>
+      </p>
+    </div>
+    <div class="card-footer bg-transparent">
+      <%= link_to "Show", order_path(order), class: "btn btn-primary btn-sm" %>
+      <%= link_to "Edit", edit_order_path(order), class: "btn btn-secondary btn-sm" %>
+      <%= link_to "Delete", order_path(order), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+    </div>
+  </div>
 </div>
-

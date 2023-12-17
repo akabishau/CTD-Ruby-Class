@@ -26,8 +26,7 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(customer_params)
     if @customer.save
-      flash.notice = "Customer was successfully created."
-      redirect_to @customer
+      redirect_to @customer, notice: "Customer was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -36,8 +35,7 @@ class CustomersController < ApplicationController
   # PATCH/PUT /customers/1 or /customers/1.json
   def update
     if @customer.update(customer_params)
-      flash.notice = "Customer was successfully updated."
-      redirect_to @customer
+      redirect_to @customer, notice: "Customer was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -46,8 +44,7 @@ class CustomersController < ApplicationController
   def destroy
     begin
       @customer.destroy
-      flash[:notice] = "The customer record was successfully deleted."
-      redirect_to customers_url
+      redirect_to customers_url, notice: "The customer record was successfully deleted."
     rescue ActiveRecord::InvalidForeignKey
       flash[:alert] = "That customer record could not be deleted because the customer has orders."
       # redirect to the custormer page or back to the list as backup option
