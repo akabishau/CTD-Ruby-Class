@@ -24,6 +24,13 @@ This repository contains my Ruby class and SQL assignments, organized by week.
   - [Assignment](rails/section-03/mdb/README.md) - Solution: [MDB App](rails/section-03/mdb)
 - **Week 8**: Additional Rails Topics
   - Solution: [Customer App](rails/section-04/customer)
+- **Week 9**: Break
+- **Week 10**: Rails Testing With RSPEC
+  - [Assignment](https://learn.codethedream.org/rails-basic-skills-rspec/) - Solution: [Customer App](rails/section-04/customer)
+- **Week 11**: Rails Comprehensive Assignment ([Customer App](rails/section-04/customer))
+  - [Assignment](https://learn.codethedream.org/rails-comprehensive-assignment-2/) - Solution: [Customer App](rails/section-04/customer)
+
+
 
 ## Additional Resources
 
