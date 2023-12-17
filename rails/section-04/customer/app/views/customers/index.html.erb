@@ -2,26 +2,25 @@
 
 <h1>Customers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Full Name</th>
-      <th>Number of Orders</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @customers.each do |customer| %>
-      <tr>
-        <td><%= customer.full_name %></td>
-        <td><%= customer.orders.count %></td>
-        <td>
-          <%= link_to "Show", customer_path(customer) %> |
-          <%= link_to "Edit", edit_customer_path(customer) %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container-fluid mb-2">
+  <div class="row font-weight-bold">
+    <div class="col-sm-8">Name</div>
+    <div class="col-sm-1">Orders</div>
+    <div class="col-sm-3">Actions</div>
+  </div>
+  
+  <% @customers.each do |customer| %>
+    <div class="row mb-1 bg-secondary">
+      <div class="col-sm-8 text-white""><%= customer.full_name %></div>
+      <div class="col-sm-1"><%= customer.orders.count %></div>
+      <div class="col-sm-3">
+        <%= link_to "Show", customer_path(customer), class: "btn btn-primary btn-sm" %>
+        <%= link_to "Edit", edit_customer_path(customer), class: "btn btn-secondary btn-sm" %>
+        <%= link_to "Delete", customer_path(customer), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-<%= link_to "New Customer", new_customer_path %>
+<%= link_to "New Customer", new_customer_path, class: "btn btn-success" %>
+
