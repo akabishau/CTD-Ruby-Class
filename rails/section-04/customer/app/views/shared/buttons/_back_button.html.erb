@@ -1,0 +1,6 @@
+<%= 
+    # use Active Record class name and pluralize it
+    link_to "Back to #{object.class.model_name.human.pluralize}", 
+    polymorphic_path(object.class), 
+    class: "btn btn-outline-secondary mt-2" 
+%>

@@ -5,59 +5,56 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <div class="bg-primary text-white text-center  px-1 py-2 mb-4 banner-background">
-      <div class="py-5">
-        <h1 class="display-4">Customers and Orders</h1>
-        <p class="lead">This is a sample application that associates orders with customers.</p>
+    <div class="container">
+      <div class="bg-primary text-center px-1 py-2 banner-background">
+        <div class="py-5">
+          <h1 class="display-4 text-dark font-weight-bold text-shadow">Customers and Orders</h1>
+          <p class="lead text-dark px-2 py-1 text-shadow">This is a sample application that associates orders with customers.</p>
+        </div>
       </div>
+
+      <nav class="navbar navbar-expand navbar-light mb-2">
+        <div class=container my-4">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <%= icon("fa-solid", "user") %> Customers
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="<%= customers_path %>">Customer List</a></li>
+                <li><a class="dropdown-item" href="<%= new_customer_path %>">New Customer</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <%= icon("fa-solid", "file-alt") %> Orders
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="<%= orders_path %>">Order List</a></li>
+                <li><a class="dropdown-item" href="<%= new_order_path %>">New Order</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <% if flash[:notice] %>
+        <div class="alert alert-success" role="alert">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <% if flash[:alert] %>
+        <div class="alert alert-danger" role="alert">
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+      
+      <div><%= yield %></div>
     </div>
-
-    <nav class="navbar navbar-expand navbar-light bg-light">
-      <div class="container-fluid">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              <%= icon('fa-solid', 'user') %> Customers
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="<%= customers_path %>">Customer List</a></li>
-              <li><a class="dropdown-item" href="<%= new_customer_path %>">New Customer</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              <%= icon('fa-solid', 'file-alt') %> Orders
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="<%= orders_path %>">Order List</a></li>
-              <li><a class="dropdown-item" href="<%= new_order_path %>">New Order</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    
-    <% if flash[:notice] %>
-      <div class="alert alert-success" role="alert">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-    <% if flash[:alert] %>
-      <div class="alert alert-danger" role="alert">
-        <%= flash[:alert] %>
-      </div>
-    <% end %>
-    
-    <div><%= yield %></div>
-
   </body>
-
-
-
 </html>

@@ -1,0 +1,6 @@
+<%= 
+    link_to "Delete",
+    polymorphic_path(object), 
+    class: "btn btn-danger btn-sm action-button",
+    data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }
+%>

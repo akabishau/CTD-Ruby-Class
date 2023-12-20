@@ -1,35 +1,11 @@
-<%= render @customer %>
+<div class="container mt-3">
+  
+  <h3>Customer Details</h3>
+  <%= render "customer" %>
 
-<% if @customer.orders.any? %>
-  <h2>Orders</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Product Name</th>
-        <th>Product Count</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @customer.orders.each do |order| %>
-        <tr>
-          <td><%= order.product_name %></td>
-          <td><%= order.product_count %></td>
-          <td>
-            <%= link_to "Show", order %>
-            <%= link_to "Edit", edit_order_path(order) %>
-            <%= link_to "Delete", order, method: :delete, data: { confirm: "Are you sure?" } %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-<% end %>
+  <h3>Orders</h3>
+  <%= render "orders/order_list", orders: @customer.orders %>
 
-<br>
+  <%= render "shared/buttons/back_button", object: @customer %>
 
-<div>
-  <%= link_to "Edit this customer", edit_customer_path(@customer) %> |
-  <%= link_to "Back to customers", customers_path %>
-  <%= button_to "Destroy this customer", @customer, method: :delete, data: { confirm: "Are you sure?" } %>
 </div>

@@ -1,13 +1,18 @@
-<div>
-  <h1>Order Details</h1>
+<div class="container mt-3">
+  <h3>Order Details</h3>
 
-  <p><strong>Product Name:</strong> <%= @order.product_name %></p>
-  <p><strong>Product Count:</strong> <%= @order.product_count %></p>
-  <p><strong>Customer:</strong> <%= @order.customer.full_name %></p>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= @order.product_name %></h5>
+      <p class="card-text"><strong>Product Count:</strong> <%= @order.product_count %></p>
+      <p class="card-text"><strong>Customer:</strong> <%= @order.customer.full_name %></p>
 
-  <div>
-    <%= link_to "Edit this order", edit_order_path(@order) %> |
-    <%= link_to "Back to orders", orders_path %>
-    <%= button_to "Destroy this order", @order, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div>
+        <%= render "shared/buttons/edit_button", object: @order %>
+        <%= render "shared/buttons/delete_button", object: @order %>
+      </div>
+    </div>
   </div>
+
+  <%= render "shared/buttons/back_button", object: @order %>
 </div>
