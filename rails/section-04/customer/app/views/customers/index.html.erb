@@ -1,27 +1,5 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Customers</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Full Name</th>
-      <th>Number of Orders</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @customers.each do |customer| %>
-      <tr>
-        <td><%= customer.full_name %></td>
-        <td><%= customer.orders.count %></td>
-        <td>
-          <%= link_to "Show", customer_path(customer) %> |
-          <%= link_to "Edit", edit_customer_path(customer) %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= link_to "New Customer", new_customer_path %>
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h3>Customers</h3>
+  <%= render "shared/buttons/new_button", model: Customer %> 
+</div>
+<%= render "customer_list", customers: @customers %>

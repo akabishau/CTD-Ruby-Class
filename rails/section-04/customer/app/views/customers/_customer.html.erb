@@ -1,17 +1,12 @@
-<div id="<%= dom_id customer %>">
-  <p>
-    <strong>Full name:</strong>
-    <%= customer.full_name %>
-  </p>
+<div class="card mb-2">
+  <div class="card-body">
+    <h5 class="card-title"><%= @customer.full_name %></h5>
+    <p class="card-text"><strong>Email:</strong> <%= @customer.email %></p>
+    <p class="card-text"><strong>Phone:</strong> <%= @customer.phone %></p>
 
-  <p>
-    <strong>Phone:</strong>
-    <%= customer.phone %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= customer.email %>
-  </p>
-
+    <div>
+      <%= render "shared/buttons/edit_button", object: @customer %>
+      <%= render "shared/buttons/delete_button", object: @customer %>
+    </div>
+  </div>
 </div>

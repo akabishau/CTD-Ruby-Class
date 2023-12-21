@@ -1,37 +1,36 @@
 <%= form_with(model: customer) do |form| %>
-  <% if customer.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
 
-      <ul>
-        <% customer.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+  <%= render "shared/errors/form_message", object: customer %>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <%= form.label :first_name %>
+      <%= form.text_field :first_name, class: "form-control" %>
     </div>
-  <% end %>
 
-  <div>
-    <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name %>
+    <div class="col-md-6 mb-3">
+      <%= form.label :last_name %>
+      <%= form.text_field :last_name, class: "form-control" %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :last_name %>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <%= form.label :phone %>
+      <%= form.text_field :phone, class: "form-control" %>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <%= form.label :email %>
+      <%= form.text_field :email, class: "form-control" %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
+  <div class="d-flex justify-content-start gap-2">
+    <%= render "shared/buttons/cancel_button",
+     path: customer.new_record? ? customers_path : customer_path 
+    %>
+    <%= render "shared/buttons/save_button", form: form %>
   </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

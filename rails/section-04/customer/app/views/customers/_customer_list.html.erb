@@ -1,0 +1,26 @@
+<% if customers.empty? %>
+  <p>There are no Customers. Go ahead and create first one!</p>
+<% else %>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="col-md-6">Name</th>
+                <th class="col-md-2">Orders</th>
+                <th class="col-md-4">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% customers.each do | customer | %>
+                <tr>
+                    <td><%= customer.full_name %></td>
+                    <td><%= customer.orders.count %></td>
+                    <td>
+                        <%= render "shared/buttons/show_button", object: customer %>
+                        <%= render "shared/buttons/edit_button", object: customer %>
+                        <%= render "shared/buttons/delete_button", object: customer %>
+                    </td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+<% end %>
