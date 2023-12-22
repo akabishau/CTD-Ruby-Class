@@ -31,7 +31,6 @@ This repository contains my Ruby class and SQL assignments, organized by week.
   - [Assignment](https://learn.codethedream.org/rails-comprehensive-assignment-2/) - Solution: [Customer App](rails/section-04/customer)
 
 
-
 ## Additional Resources
 
 - [Ruby Learning Resources](./ruby-resources.md): A list of helpful Ruby learning materials and resources.
