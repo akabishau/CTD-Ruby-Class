@@ -33,7 +33,7 @@ This repository contains my Ruby class and SQL assignments, organized by week.
   - [Assignment](https://learn.codethedream.org/styling-your-rails-7-application-with-bootstrap-2/) - Solution: [Customer App](rails/section-04/customer), [PR](https://github.com/akabishau/CTD-Ruby-Class/pull/14)
 - **Week 13-14**: Winter Break
 - **Week 15**: Building An API, Swagger - Part 1
-  - [Assignment 1](https://learn.codethedream.org/rest-introduction-and-authentication-2/) - Solution: [API-Practice](rails/section-04/api-practice)
+  - [Assignment 1](https://learn.codethedream.org/rest-introduction-and-authentication-2/), [Assignment 2](https://learn.codethedream.org/more-rest-apis-2/) - Solution: [API-Practice](rails/section-04/api-practice)
 
 
 ## Additional Resources
