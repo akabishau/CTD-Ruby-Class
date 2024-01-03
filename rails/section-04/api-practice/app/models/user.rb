@@ -9,4 +9,6 @@ class User < ApplicationRecord
          :recoverable,
          :rememberable,
          :validatable
+
+  has_many :members, dependent: :restrict_with_error
 end
