@@ -54,5 +54,6 @@
 
   "[ruby]": {
     "editor.defaultFormatter": "castwide.solargraph"
-  }
+  },
+  "solargraph.useBundler": false
 }
