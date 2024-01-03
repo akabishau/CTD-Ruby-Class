@@ -22,3 +22,6 @@ Style/Documentation:
 
 Style/SymbolArray:
   Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
