@@ -34,6 +34,8 @@ This repository contains my Ruby class and SQL assignments, organized by week.
 - **Week 13-14**: Winter Break
 - **Week 15**: Building An API, Swagger - Part 1
   - [Assignment 1](https://learn.codethedream.org/rest-introduction-and-authentication-2/), [Assignment 2](https://learn.codethedream.org/more-rest-apis-2/) - Solution: [API-Practice](rails/section-04/api-practice)
+- **Week 16**: Building An API, Swagger - Part 2
+  - [Assignment](https://learn.codethedream.org/rest-introduction-and-authentication-2/) - Solution: [API-Practice](rails/section-04/api-practice)
 
 
 ## Additional Resources
