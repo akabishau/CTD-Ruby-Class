@@ -14,7 +14,8 @@ class Api::V1::FactsController < ApplicationController
 
   # GET /members/:member_id/facts/:id
   def show
-    # your code goes here
+    @fact = Fact.find(params[:id])
+    render json: @fact
   end
 
   # POST /members/:member_id/facts
@@ -32,12 +33,17 @@ class Api::V1::FactsController < ApplicationController
 
   # PUT /members/:member_id/facts/:id
   def update
-    # your code goes here
+    if @fact.update(fact_params)
+      render json: @fact
+    else
+      render json: @fact.errors, status: :unprocessable_entity
+    end
   end
 
   # DELETE /members/:member_id/facts/:id
   def destroy
-    # your code goes here
+    @fact.destroy
+    render json: { message: "Fact successfully deleted" }, status: :ok
   end
 
   private

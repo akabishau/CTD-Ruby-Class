@@ -15,3 +15,11 @@ gem "solargraph-rails", groups: [:development, :test]
 gem "sqlite3", "~> 1.4"
 gem "strong_password"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
+
+# added for "swagger" lesson
+gem "factory_bot_rails", groups: [:test]
+gem "faker", groups: [:test]
+gem "rails-controller-testing", groups: [:test]
+gem "rexml"
+gem "rspec-rails", groups: [:development, :test]
+gem "rswag", groups: [:development, :test]
